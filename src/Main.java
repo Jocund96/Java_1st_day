@@ -1,6 +1,7 @@
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -32,8 +33,6 @@ public class Main {
         System.out.println("\n\nExecution time: " + executionTime + " milliseconds");
         System.out.println("Memory used: " + memoryUsed + " bytes");
         System.out.println("Memory used: " + memoryUsed/1024 + " Kbytes");
-
-
     }
     static void first() {
         for (int i = 1; i <= 20; i++) {
@@ -110,8 +109,10 @@ public class Main {
     }
     static void sixth() {
         //TIP Find the Tax and Tip
+
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter cost of the a meal: ");
+
         double cost = input.nextDouble();
         double tax = cost * 0.15;
         double tip = cost * 0.18;
@@ -121,7 +122,15 @@ public class Main {
                 "The grand total for the meal is %.2f",cost,tax,tip,grand_total);
     }
     static void seventh() {
-        System.out.println("Hello World!");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter the distance to drive: ");
+        double distance = input.nextDouble();
+        System.out.print("Please enter the fuel efficiency of the car in mpg (miles per gallon): ");
+        double fuel = input.nextDouble();
+        System.out.print("Please enter the price per gallon: ");
+        double price = input.nextDouble();
+        double total_cost = distance/fuel*price;
+        System.out.printf("The cost of driving is $%.2f", total_cost);
     }
 
 }
