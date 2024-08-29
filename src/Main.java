@@ -25,6 +25,7 @@ public class Main {
         //fifth();
         //sixth();
         seventh();
+        System.out.println("Done");
         //Calculation of an execution time and MemoryUsage
         long endTime = System.currentTimeMillis();
         long endMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
