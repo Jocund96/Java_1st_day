@@ -21,10 +21,10 @@ public class Main {
         //second();
         //third();
         //fourth();
-        fifth();
+        //fifth();
         //sixth();
-        //seventh();
-        //Calculation of a execution time and MemoryUsage
+        seventh();
+        //Calculation of an execution time and MemoryUsage
         long endTime = System.currentTimeMillis();
         long endMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         long executionTime = endTime - startTime;
@@ -109,7 +109,16 @@ public class Main {
         System.out.printf("The area of the Equitlateral Triangle is %.2f \n The area of the Equitlateral Triangle is %.2f",area, volume);
     }
     static void sixth() {
-        System.out.println("Hello World!");
+        //TIP Find the Tax and Tip
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter cost of the a meal: ");
+        double cost = input.nextDouble();
+        double tax = cost * 0.15;
+        double tip = cost * 0.18;
+        double grand_total = cost+tax+tip;
+        System.out.printf("The initial cost of meal amount is %.2f\n" +
+                "The tax amount is %.2f\n The tip amount is %.2f\n " +
+                "The grand total for the meal is %.2f",cost,tax,tip,grand_total);
     }
     static void seventh() {
         System.out.println("Hello World!");
