@@ -1,24 +1,40 @@
+
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
+
     public static void main(String[] args) {
         //TIP Java First Tasks by Jocund
-        System.out.println("Hello and welcome my friend !\n");
+        long startTime = System.currentTimeMillis();
+        long startMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
+        System.out.println("Hello and welcome my friend !\n");
 
         //Uncomment task number to see the result to see the result
 
         //first();
         //second();
-        third();
-        //fourth();
+        //third();
+        fourth();
         //fifth();
         //sixth();
         //seventh();
-        }
+        //Calculation of a execution time and MemoryUsage
+        long endTime = System.currentTimeMillis();
+        long endMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        long executionTime = endTime - startTime;
+        long memoryUsed = endMemory - startMemory;
+        System.out.println("\n\nExecution time: " + executionTime + " milliseconds");
+        System.out.println("Memory used: " + memoryUsed + " bytes");
+        System.out.println("Memory used: " + memoryUsed/1024 + " Kbytes");
+
+
+    }
     static void first() {
         for (int i = 1; i <= 20; i++) {
             System.out.print("___");
@@ -57,12 +73,33 @@ public class Main {
         System.out.println("Hello " + message + ". How are you?");
     }
     static void third() {
-        System.out.println("Hello World!");
+        //TIP Find the area and perimeter of a rectangle
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please write a width of rectangle: ");
+        Double widthIn = input.nextDouble();
+        System.out.print("Please write a height of rectangle: ");
+        Double heightIn = input.nextDouble();
+        //final double width = 4.5;
+        //final double height = 7.9;
+        double area = widthIn * heightIn;
+        double perimeter = 2 * (area);
+        System.out.println("Area of a rectangle is "+ area +
+                "\nPerimeter of a rectangle is " + perimeter);
     }
     static void fourth() {
-        System.out.println("Hello World!");
+        //TIP Find the volume of a cylinder
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please write a radius of cylinder: ");
+        double radius = input.nextDouble();
+        System.out.print("Please write a length of cylinder: ");
+        double length = input.nextDouble();
+        double area = Math.pow(radius,2) * Math.PI;
+        double volume = area * length;
+        System.out.printf("Area of a cylinder is %.2f " +
+                "\nVolume of a cylinder is %.2f", area, volume);
     }
     static void fifth() {
+
         System.out.println("Hello World!");
     }
     static void sixth() {
@@ -71,4 +108,5 @@ public class Main {
     static void seventh() {
         System.out.println("Hello World!");
     }
-    }
+
+}
