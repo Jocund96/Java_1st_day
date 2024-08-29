@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -10,8 +12,8 @@ public class Main {
         //Uncomment task number to see the result to see the result
 
         //first();
-        second();
-        //third();
+        //second();
+        third();
         //fourth();
         //fifth();
         //sixth();
@@ -48,7 +50,11 @@ public class Main {
 
     }
     static void second() {
-        System.out.println("Hello World!");
+        //Respond hello to the user who will write his/her name
+        Scanner inp = new Scanner(System.in);
+        System.out.println("Please write your name: ");
+        String message = inp.next();
+        System.out.println("Hello " + message + ". How are you?");
     }
     static void third() {
         System.out.println("Hello World!");
