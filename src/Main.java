@@ -20,8 +20,8 @@ public class Main {
         //first();
         //second();
         //third();
-        fourth();
-        //fifth();
+        //fourth();
+        fifth();
         //sixth();
         //seventh();
         //Calculation of a execution time and MemoryUsage
@@ -75,9 +75,9 @@ public class Main {
     static void third() {
         //TIP Find the area and perimeter of a rectangle
         Scanner input = new Scanner(System.in);
-        System.out.print("Please write a width of rectangle: ");
+        System.out.print("Please enter the  width of the rectangle: ");
         Double widthIn = input.nextDouble();
-        System.out.print("Please write a height of rectangle: ");
+        System.out.print("Please enter the height of the rectangle: ");
         Double heightIn = input.nextDouble();
         //final double width = 4.5;
         //final double height = 7.9;
@@ -89,7 +89,7 @@ public class Main {
     static void fourth() {
         //TIP Find the volume of a cylinder
         Scanner input = new Scanner(System.in);
-        System.out.print("Please write a radius of cylinder: ");
+        System.out.print("Please enter the radius of the cylinder: ");
         double radius = input.nextDouble();
         System.out.print("Please write a length of cylinder: ");
         double length = input.nextDouble();
@@ -99,8 +99,14 @@ public class Main {
                 "\nVolume of a cylinder is %.2f", area, volume);
     }
     static void fifth() {
+        //TIP Find the volume of an equilateral triangle
 
-        System.out.println("Hello World!");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter length of the sides of equilateral triangle: ");
+        double side = input.nextDouble();
+        double area = Math.sqrt(3)/4 * Math.pow(side,2);
+        double volume = area * side;
+        System.out.printf("The area of the Equitlateral Triangle is %.2f \n The area of the Equitlateral Triangle is %.2f",area, volume);
     }
     static void sixth() {
         System.out.println("Hello World!");
